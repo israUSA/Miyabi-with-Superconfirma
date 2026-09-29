@@ -1,0 +1,67 @@
+---
+const treatmentLinks = [
+  "Diseño de Sonrisa 3D",
+  "Carillas de Porcelana",
+  "Implantes de Carga Inmediata",
+  "Ortodoncia Invisible",
+  "Blanqueamiento Láser Clínico",
+];
+---
+
+<footer class="bg-dark">
+  <div class="shell flex flex-col gap-12 py-16">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-[380px_1fr_1fr] lg:gap-16">
+      <div class="flex flex-col gap-4">
+        <p class="font-display text-2xl font-bold tracking-[0.1em] text-gold">GLOW</p>
+        <p class="text-[13px] leading-[1.6] text-mist">
+          Clínica Odontológica Boutique de Alta Gama. Especialistas en diseño digital de sonrisa,
+          implantología guiada y estética dental biomimética.
+        </p>
+        <p class="text-[11px] text-gold">
+          Miembro SEPES · AACD New York · Certificación ISO 9001
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-3.5">
+        <p class="text-xs font-bold tracking-[0.1em] text-gold">TRATAMIENTOS</p>
+        <ul class="flex flex-col gap-2.5">
+          {
+            treatmentLinks.map((link) => (
+              <li>
+                <a
+                  href="#tratamientos"
+                  class="text-xs text-mist transition-colors duration-300 hover:text-gold"
+                >
+                  {link}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-3.5">
+        <p class="text-xs font-bold tracking-[0.1em] text-gold">ATENCIÓN &amp; LOCALIZACIÓN</p>
+        <p class="text-xs text-mist">
+          Paseo de la Castellana 82, Planta 4ª · Barrio de Salamanca
+        </p>
+        <p class="text-xs text-mist">
+          Lunes a Viernes: 09:00 - 20:30 (Cita Previa Exclusiva)
+        </p>
+        <p class="text-xs text-mist">Servicio de Valet Parking privado incluido</p>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col items-center justify-between gap-3 border-t border-line-dark pt-6 sm:flex-row"
+    >
+      <p class="text-[11px] text-mist">
+        © 2026 GLOW Dental Studio. Todos los derechos reservados. Registro Sanitario Clínico
+        CS-10492.
+      </p>
+      <p class="text-[11px] text-mist">
+        Aviso Legal · Política de Privacidad · Consentimiento Informado
+      </p>
+    </div>
+  </div>
+</footer>

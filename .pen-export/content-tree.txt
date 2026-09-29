@@ -1,0 +1,513 @@
+GLOW Dental Studio - Landing Page
+  Top Announcement Bar
+    Left Announcement Content
+      >[SVG]
+      Announcement Text
+        >VALORACIÓN DIGITAL 3D &amp; ESCANEO INTRAORAL SIN COSTO ESTE MES
+    Contact Text
+      >Suites Privadas · Valet Parking · Citas: +34 910 882 100
+  Navigation Header
+    Brand Logo
+      Monogram Box
+        Monogram Letter
+          >G
+      Brand Text Column
+        Brand Name
+          >GLOW
+        Brand Subtitle
+          >DENTAL STUDIO · ALTA ESTÉTICA
+    Nav Links
+      Nav Link Inicio
+        >Inicio
+      Nav Link Qué Ofrecemos
+        >Qué Ofrecemos
+      Nav Link Tecnología 3D
+        >Tecnología 3D
+      Nav Link Experiencia
+        >Experiencia
+      Nav Link Reservar Cita
+        >Reservar Cita
+    Header Actions
+      WhatsApp Quick Button
+        >[SVG]
+        WA Text
+          >WhatsApp Directo
+      Header Reservation Button
+        >[SVG]
+        Res Button Text
+          >AGENDAR CITA
+  Hero Section
+    Hero Left Column
+      Hero Eyebrow Pill
+        >[SVG]
+        Eyebrow Text
+          >CLÍNICA DENTAL BOUTIQUE
+      Hero Spectacular Headline
+        >Tu sonrisa perfecta, diseñada sin dolor.
+      Hero Pitch Description
+        >Carillas de porcelana, implantes guiados y ortodoncia invisible. Tratamientos indoloros
+            con tecnología 3D y atención médica personalizada.
+      Hero CTA Row
+        Primary Hero Button
+          >[SVG]
+          Primary Button Text
+            >RESERVAR CITA DE VALORACIÓN
+        Secondary Hero Button
+          Secondary Button Text
+            >Ver Tratamientos
+          >[SVG]
+      Trust Metrics Row
+        Metric Box +4,800
+          Metric Value
+            >+4,800
+          Metric Label
+            >Sonrisas creadas
+        Metric Box 100%
+          Metric Value
+            >100%
+          Metric Label
+            >Sin dolor ni estrés
+        Metric Box 15 Años
+          Metric Value
+            >15 Años
+          Metric Label
+            >De experiencia
+        Metric Box 4.9 ★
+          Metric Value
+            >4.9 ★
+          Metric Label
+            >Opiniones Verificadas
+    Hero Right Column
+      Hero Showcase Stage
+        Stage Top Badges Row
+          Guarantee Pill
+            >[SVG]
+            Shield Text
+              >Garantía Clínica Vitalicia
+          Scan Badge
+            >[SVG]
+            Scan Text
+              >Escaneo 3D Sin Pastas
+        Hero Center Focus
+          Hero Smile Photo
+          Center Feature Title
+            >Simulación Digital en 3D
+          Center Feature Desc
+            >Visualiza tu resultado antes de comenzar. Carillas cerámicas y diseño facial
+                adaptado a tu fisionomía.
+        Doctor VIP Card
+          Doctor Avatar Circle
+            Doctor Initials
+              >AM
+          Doctor Info Column
+            Doctor Name
+              >Dr. Alejandro Morales · Director Médico
+            Doctor Title
+              >Cirujano Maxilofacial · Fellowship Estética Suiza &amp; Harvard
+  Pillars Bar
+    Pillar Item Escaneo Digital 3D
+      Pillar Icon Frame
+        >[SVG]
+      Pillar Text Col
+        Pillar Title
+          >Escaneo Digital 3D
+        Pillar Desc
+          >Sin pastas incómodas. Precisión en 60s.
+    Pillar Item Protocolo 100% Sin Dolor
+      Pillar Icon Frame
+        >[SVG]
+      Pillar Text Col
+        Pillar Title
+          >Protocolo 100% Sin Dolor
+        Pillar Desc
+          >Sedación consciente y anestesia computarizada.
+    Pillar Item Cerámica Suiza Pura
+      Pillar Icon Frame
+        >[SVG]
+      Pillar Text Col
+        Pillar Title
+          >Cerámica Suiza Pura
+        Pillar Desc
+          >Biomateriales nobles libres de metales.
+    Pillar Item Suites Privadas VIP
+      Pillar Icon Frame
+        >[SVG]
+      Pillar Text Col
+        Pillar Title
+          >Suites Privadas
+        Pillar Desc
+          >Atención individual y confidencialidad médica.
+  Treatments Section
+    Treatments Header Col
+      Treatments Eyebrow
+        >LO QUE OFRECEMOS · ALTA ODONTOLOGÍA
+      Treatments Title
+        >Tratamientos Exclusivos de Vanguardia
+      Treatments Subtitle
+        >Soluciones odontológicas definitivas creadas por especialistas con la tecnología de
+            bio-precisión más avanzada de Europa.
+    Treatments Cards Row
+      Treatment Card Diseño de Sonrisa 3D
+        Card Top Content
+          Card Icon Row
+            Card Icon Box
+              >[SVG]
+          Card Tag
+            >ESTÉTICA DE ALTA GAMA
+          Card Title
+            >Diseño de Sonrisa 3D
+          Card Desc
+            >Microcarillas de porcelana suiza ultrafinas sin desgaste dental agresivo.
+                Visualización y simulación digital previa en tu rostro.
+        Card Badge Box
+          >[SVG]
+          Badge Text
+            >1 a 2 Sesiones · Garantía 10 Años
+      Treatment Card Implantes Guiados 3D
+        Card Top Content
+          Card Icon Row
+            Card Icon Box
+              >[SVG]
+          Card Tag
+            >CIRUGÍA REGENERATIVA
+          Card Title
+            >Implantes Guiados 3D
+          Card Desc
+            >Colocación robótica guiada por TAC de alta resolución. Carga inmediata de diente
+                fijo en el mismo día, sin puntos ni dolor.
+        Card Badge Box
+          >[SVG]
+          Badge Text
+            >Carga en 24h · Titanio Grado 5
+      Treatment Card Ortodoncia Diamond
+        Card Top Content
+          Card Icon Row
+            Card Icon Box
+              >[SVG]
+          Card Tag
+            >ALINEACIÓN INVISIBLE
+          Card Title
+            >Ortodoncia Diamond
+          Card Desc
+            >Alineadores imperceptibles de máxima estética. Planificación digital predictiva de
+                cada micromovimiento y monitoreo remoto.
+        Card Badge Box
+          >[SVG]
+          Badge Text
+            >Sin brackets metálicos · Removible
+      Treatment Card Blanqueamiento Láser
+        Card Top Content
+          Card Icon Row
+            Card Icon Box
+              >[SVG]
+          Card Tag
+            >FOTO-ACTIVACIÓN LÁSER
+          Card Title
+            >Blanqueamiento Láser
+          Card Desc
+            >Aclaramiento profundo de hasta 8 tonos en una sesión única de 45 min. Fórmula
+                protectora biocompatible con 0% sensibilidad.
+        Card Badge Box
+          >[SVG]
+          Badge Text
+            >Sesión Única · Brillo Radiante
+  Booking Section
+    Booking Header Col
+      Booking Eyebrow
+        >EXPERIENCIA EXCLUSIVA SIN ESPERAS
+      Booking Title
+        >Reserva Tu Cita de Valoración
+      Booking Subtitle
+        >Elige tu tratamiento de interés, tu especialista y tu horario preferido. Un conserje
+            médico te asignará una suite privada y confirmará tu cita en minutos.
+    Booking Atelier Container
+      Booking Step 1 - Treatments
+        Step 1 Label
+          >1. SELECCIONA EL TRATAMIENTO DE TU INTERÉS
+        Treatment Chips Row
+          Chip Diseño de Sonrisa 3D
+            >[SVG]
+            Chip Label
+              >Diseño de Sonrisa 3D
+          Chip Implantes Guiados 3D
+            Chip Label
+              >Implantes Guiados 3D
+          Chip Ortodoncia Diamond
+            Chip Label
+              >Ortodoncia Diamond
+          Chip Blanqueamiento Láser
+            Chip Label
+              >Blanqueamiento Láser
+          Chip Revisión &amp; Spa Dental
+            Chip Label
+              >Revisión &amp; Spa Dental
+      Booking Step 2 - Doctor Selection
+        Step 2 Label
+          >2. ESPECIALISTA MÉDICO ASIGNADO
+        Doctor Cards Row
+          Doctor Choice Dr. Alejandro Morales
+            Radio Frame
+              >[SVG]
+            Doc Text Col
+              Doc Name Text
+                >Dr. Alejandro Morales
+              Doc Role Text
+                >Director de Estética &amp; Carillas Cerámicas
+              Doc Uni Text
+                >Harvard &amp; Ginebra · +15 Años Exp.
+          Doctor Choice Dra. Elena Vidal
+            Radio Frame
+            Doc Text Col
+              Doc Name Text
+                >Dra. Elena Vidal
+              Doc Role Text
+                >Especialista en Ortodoncia Invisible Diamond
+              Doc Uni Text
+                >Universidad de Berna · Diamond Apex Provider
+          Doctor Choice Dr. Carlos Santoro
+            Radio Frame
+            Doc Text Col
+              Doc Name Text
+                >Dr. Carlos Santoro
+              Doc Role Text
+                >Cirujano de Implantes &amp; Carga Inmediata
+              Doc Uni Text
+                >Frankfurt Institute · Cirugía Guiada 3D
+      Booking Step 3 - Date and Time
+        Step 3 Label
+          >3. FECHA Y HORARIO DE PREFERENCIA
+        Date and Time Split Row
+          Dates Sub Col
+            Date Subtitle
+              >Próximos días disponibles:
+            Dates Pills Row
+              Day Pill Jue 1
+                Day Text
+                  >Jue 1
+                Month Text
+                  >Oct
+              Day Pill Vie 2
+                Day Text
+                  >Vie 2
+                Month Text
+                  >Oct
+              Day Pill Lun 5
+                Day Text
+                  >Lun 5
+                Month Text
+                  >Oct
+              Day Pill Mar 6
+                Day Text
+                  >Mar 6
+                Month Text
+                  >Oct
+          Times Sub Col
+            Time Subtitle
+              >Horarios en Suite Privada:
+            Times Pills Row
+              Hour Pill 10:30 AM
+                Hour Text
+                  >10:30 AM
+              Hour Pill 12:00 PM
+                Hour Text
+                  >12:00 PM
+              Hour Pill 04:30 PM
+                Hour Text
+                  >04:30 PM
+              Hour Pill 06:00 PM
+                Hour Text
+                  >06:00 PM
+      Booking Step 4 - Patient Fields
+        Step 4 Label
+          >4. DATOS PERSONALES DEL PACIENTE
+        Inputs Grid Row
+          Input Box Nombre y Apellidos
+            Input Label
+              >Nombre y Apellidos
+            Input Visual Field
+              >[SVG]
+              Input Value
+                >Sofía Montesdeoca
+          Input Box Teléfono / WhatsApp VIP
+            Input Label
+              >Teléfono / WhatsApp
+            Input Visual Field
+              >[SVG]
+              Input Value
+                >+34 612 345 678
+          Input Box Correo Electrónico
+            Input Label
+              >Correo Electrónico
+            Input Visual Field
+              >[SVG]
+              Input Value
+                >sofia.montes@luxury.com
+      Confirm Booking Button
+        >[SVG]
+        Confirm Btn Text
+          >SOLICITAR RESERVA EN SUITE PRIVADA · CONFIRMACIÓN INMEDIATA
+      Booking Security Notes Row
+        Note Item
+          >[SVG]
+          Note Text
+            >Confidencialidad médica y protección de datos RGPD
+        Note Item
+          >[SVG]
+          Note Text
+            >Sin tiempos de espera: entrada directa a suite privada
+        Note Item
+          >[SVG]
+          Note Text
+            >Escaneo intraoral 3D de alta definición incluido
+  Experience Section
+    Experience Header Col
+      Exp Eyebrow
+        >LA EXPERIENCIA GLOW
+      Exp Title
+        >Odontología en un Entorno de Calma y Confort
+      Exp Subtitle
+        >Espacios diseñados para tu máxima serenidad: suites médicas privadas, tecnología 3D y
+            atención personalizada sin dolor ni prisas.
+    Experience Cards Row
+      Exp Photo Card Suites Privadas Individuales
+        Photo Frame
+        Card Body Content
+          Card Tag
+            >CALMA &amp; CONFORT
+          Card Title
+            >Suites Privadas Individuales
+          Card Desc
+            >Atención exclusiva en salas insonorizadas con aromaterapia, sillones de descanso y
+                pantallas en techo con streaming.
+          Card Badge
+            >[SVG]
+            Badge Label
+              >100% Privacidad · Sin esperas
+      Exp Photo Card Escaneo Digital en 60 Segundos
+        Photo Frame
+        Card Body Content
+          Card Tag
+            >BIO-PRECISIÓN 3D
+          Card Title
+            >Escaneo Digital en 60 Segundos
+          Card Desc
+            >Diagnóstico instantáneo con escáner intraoral 3D. Olvídate de los moldes de pasta y
+                visualiza tu nueva sonrisa en pantalla.
+          Card Badge
+            >[SVG]
+            Badge Label
+              >Sin pastas · Simulación digital
+      Exp Photo Card Atención Sin Estrés ni Prisas
+        Photo Frame
+        Card Body Content
+          Card Tag
+            >ODONTOLOGÍA SIN DOLOR
+          Card Title
+            >Atención Sin Estrés ni Prisas
+          Card Desc
+            >Protocolos de sedación consciente y anestesia computarizada. Dedicamos el tiempo
+                necesario a cada detalle de tu salud.
+          Card Badge
+            >[SVG]
+            Badge Label
+              >Cero dolor · Atención 1 a 1
+  Testimonials Section
+    Testimonials Header
+      Testimonials Eyebrow
+        >EXPERIENCIAS DE NUESTROS PACIENTES
+      Testimonials Title
+        >Sonrisas Reales que Inspiran Confianza
+    Testimonials Row
+      Review Card Carolina Herrera R.
+        Review Top
+          Stars Row
+            >[SVG]
+                [SVG]
+                [SVG]
+                [SVG]
+                [SVG]
+          Review Quote
+            >«Nunca imaginé que transformar mi sonrisa fuera tan agradable. Cero molestias, el
+                escaneo 3D fue instantáneo y el resultado es tan natural que nadie nota que llevo
+                carillas.»
+        Review Bottom
+          Author Name
+            >Carolina Herrera R.
+          Author Role
+            >Empresaria y Coleccionista
+          Author Treatment
+            >Diseño de Sonrisa 3D (Carillas Suizas)
+      Review Card Ignacio de la Torre
+        Review Top
+          Stars Row
+            >[SVG]
+                [SVG]
+                [SVG]
+                [SVG]
+                [SVG]
+          Review Quote
+            >«Recuperé mi sonrisa completa en un solo día. La precisión del equipo médico del Dr.
+                Morales y la calma de la suite privada superaron todas mis expectativas.»
+        Review Bottom
+          Author Name
+            >Ignacio de la Torre
+          Author Role
+            >Arquitecto de Interiores
+          Author Treatment
+            >Implantes Guiados 3D (Carga Inmediata)
+      Review Card Valeria Soler
+        Review Top
+          Stars Row
+            >[SVG]
+                [SVG]
+                [SVG]
+                [SVG]
+                [SVG]
+          Review Quote
+            >«La atención personalizada y el nivel de detalle son insuperables. Alineé mis
+                dientes con absoluta discreción y sin alterar mis compromisos profesionales.»
+        Review Bottom
+          Author Name
+            >Valeria Soler
+          Author Role
+            >Consultora Financiera
+          Author Treatment
+            >Ortodoncia Diamond &amp; Blanqueamiento
+  Luxury Footer
+    Footer Columns Row
+      Footer Col Brand
+        Footer Brand Title
+          >GLOW
+        Footer Brand Motto
+          >Clínica Odontológica Boutique de Alta Gama. Especialistas en diseño digital de
+              sonrisa, implantología guiada y estética dental biomimética.
+        Footer Badges
+          >Miembro SEPES · AACD New York · Certificación ISO 9001
+      Footer Col Treatments
+        Col 2 Title
+          >TRATAMIENTOS
+        Col 2 Item
+          >Diseño de Sonrisa 3D
+        Col 2 Item
+          >Carillas de Porcelana
+        Col 2 Item
+          >Implantes de Carga Inmediata
+        Col 2 Item
+          >Ortodoncia Invisible
+        Col 2 Item
+          >Blanqueamiento Láser Clínico
+      Footer Col Contact
+        Col 3 Title
+          >ATENCIÓN &amp; LOCALIZACIÓN
+        Contact Address
+          >Paseo de la Castellana 82, Planta 4ª · Barrio de Salamanca
+        Contact Hours
+          >Lunes a Viernes: 09:00 - 20:30 (Cita Previa Exclusiva)
+        Contact Valet
+          >Servicio de Valet Parking privado incluido
+    Footer Bottom Bar
+      Copyright Text
+        >© 2026 GLOW Dental Studio. Todos los derechos reservados. Registro Sanitario Clínico
+            CS-10492.
+      Legal Links
+        >Aviso Legal · Política de Privacidad · Consentimiento Informado

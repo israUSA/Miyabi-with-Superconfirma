@@ -1,0 +1,44 @@
+---
+import Icon from "./Icon.astro";
+
+const pillars = [
+  {
+    icon: "scan-face",
+    title: "Escaneo Digital 3D",
+    desc: "Sin pastas incómodas. Precisión en 60s.",
+  },
+  {
+    icon: "heart-pulse",
+    title: "Protocolo 100% Sin Dolor",
+    desc: "Sedación consciente y anestesia computarizada.",
+  },
+  {
+    icon: "gem",
+    title: "Cerámica Suiza Pura",
+    desc: "Biomateriales nobles libres de metales.",
+  },
+  {
+    icon: "shield-check",
+    title: "Suites Privadas",
+    desc: "Atención individual y confidencialidad médica.",
+  },
+];
+---
+
+<section id="tecnologia" class="bg-dark">
+  <div class="shell grid grid-cols-1 gap-8 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+    {
+      pillars.map((pillar) => (
+        <div data-reveal class="flex items-center gap-3.5">
+          <span class="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-full border border-line-dark bg-dark-card">
+            <Icon name={pillar.icon} class="h-[18px] w-[18px] text-gold" />
+          </span>
+          <div class="flex flex-col gap-0.5">
+            <p class="text-[13px] font-semibold text-white">{pillar.title}</p>
+            <p class="text-[11px] text-mist">{pillar.desc}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

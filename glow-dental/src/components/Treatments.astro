@@ -1,0 +1,75 @@
+---
+import Icon from "./Icon.astro";
+
+const treatments = [
+  {
+    icon: "sparkles",
+    tag: "ESTÉTICA DE ALTA GAMA",
+    title: "Diseño de Sonrisa 3D",
+    desc: "Microcarillas de porcelana suiza ultrafinas sin desgaste dental agresivo. Visualización y simulación digital previa en tu rostro.",
+    badge: "1 a 2 Sesiones · Garantía 10 Años",
+  },
+  {
+    icon: "target",
+    tag: "CIRUGÍA REGENERATIVA",
+    title: "Implantes Guiados 3D",
+    desc: "Colocación robótica guiada por TAC de alta resolución. Carga inmediata de diente fijo en el mismo día, sin puntos ni dolor.",
+    badge: "Carga en 24h · Titanio Grado 5",
+  },
+  {
+    icon: "smile",
+    tag: "ALINEACIÓN INVISIBLE",
+    title: "Ortodoncia Diamond",
+    desc: "Alineadores imperceptibles de máxima estética. Planificación digital predictiva de cada micromovimiento y monitoreo remoto.",
+    badge: "Sin brackets metálicos · Removible",
+  },
+  {
+    icon: "zap",
+    tag: "FOTO-ACTIVACIÓN LÁSER",
+    title: "Blanqueamiento Láser",
+    desc: "Aclaramiento profundo de hasta 8 tonos en una sesión única de 45 min. Fórmula protectora biocompatible con 0% sensibilidad.",
+    badge: "Sesión Única · Brillo Radiante",
+  },
+];
+---
+
+<section id="tratamientos" class="bg-surface">
+  <div class="shell flex flex-col items-center gap-12 py-20">
+    <div class="flex flex-col items-center gap-3.5 text-center" data-reveal-stagger>
+      <p class="eyebrow" data-reveal>LO QUE OFRECEMOS · ALTA ODONTOLOGÍA</p>
+      <h2 class="section-title" data-reveal>Tratamientos Exclusivos de Vanguardia</h2>
+      <p class="section-sub" data-reveal>
+        Soluciones odontológicas definitivas creadas por especialistas con la tecnología de
+        bio-precisión más avanzada de Europa.
+      </p>
+    </div>
+
+    <div class="grid w-full grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4" data-reveal-stagger>
+      {
+        treatments.map((treatment) => (
+          <article
+            data-reveal
+            class="card-lift group flex flex-col justify-between gap-5 rounded-lg border border-line bg-cream p-7"
+          >
+            <div class="flex flex-col items-start gap-4">
+              <span class="flex h-11 w-11 items-center justify-center rounded-md border border-line bg-surface transition-all duration-500 group-hover:border-gold group-hover:bg-gold">
+                <Icon
+                  name={treatment.icon}
+                  class="h-5 w-5 text-gold-dark transition-colors duration-500 group-hover:text-dark"
+                  strokeWidth={1.8}
+                />
+              </span>
+              <p class="text-[10px] font-bold tracking-[0.12em] text-gold-dark">{treatment.tag}</p>
+              <h3 class="font-display text-xl font-bold text-ink">{treatment.title}</h3>
+              <p class="text-[13px] leading-5 text-ink-soft">{treatment.desc}</p>
+            </div>
+            <div class="inline-flex items-center gap-1.5 rounded border border-line bg-surface px-3 py-2">
+              <Icon name="circle-check" class="h-3.5 w-3.5 shrink-0 text-gold-dark" />
+              <span class="text-[11px] font-semibold text-ink">{treatment.badge}</span>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
