@@ -1,0 +1,39 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Miyabi 雅 — Haute Cuisine Japonesa | Omakase de Autor",
+  description =
+    "Miyabi es un santuario gastronómico de alta cocina japonesa. Experiencia Omakase de 18 tiempos, Wagyu A5 de Kobe y bodega de sakes exclusivos. Reserva tu asiento frente al maestro Itamae.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="h-full bg-[var(--bg-main)] font-body text-[var(--text-light)] antialiased">
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <slot />
+    <script>
+      import "../scripts/motion.js";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+---
+const bullets = [
+  {
+    title: "Dos turnos diarios",
+    description: "19:30 hrs y 21:45 hrs con puntualidad japonesa.",
+  },
+  {
+    title: "Atención personalizada",
+    description: "Adaptación previa a restricciones y alergias alimentarias.",
+  },
+  {
+    title: "Código de vestimenta",
+    description: "Smart Casual / Elegante para preservar la atmósfera serena.",
+  },
+];
+
+const dates = ["Viernes, 24 de Octubre 2026", "Sábado, 25 de Octubre 2026", "Domingo, 26 de Octubre 2026"];
+const turnos = ["Primer Turno — 19:30 hrs", "Segundo Turno — 21:45 hrs"];
+const comensales = ["2 Personas (Barra Principal)", "3 Personas (Barra Principal)", "4 Personas (Barra Principal)", "Evento Privado (10 Comensales)"];
+const menus = [
+  "Experiencia Omakase Imperial (18 Tiempos)",
+  "Experiencia Omakase Clásica (12 Tiempos)",
+  "Omakase Vegetal de Temporada",
+];
+---
+
+<section id="reserva" class="relative overflow-hidden bg-[var(--bg-main)]">
+  <div class="pointer-events-none absolute inset-0 select-none opacity-[0.14]" aria-hidden="true">
+    <span
+      data-reveal="kanji"
+      class="font-display absolute top-[60px] left-[510px] block text-[480px] leading-none text-[#D4AF37] max-lg:top-1/2 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:-translate-y-1/2"
+    >
+      <span data-parallax="0.16" class="block">雅</span>
+    </span>
+  </div>
+  <div class="relative flex items-center justify-between px-16 py-20 max-lg:flex-col max-lg:gap-14 max-lg:px-8 max-lg:py-14">
+    <div class="flex w-[500px] flex-col gap-6 max-lg:w-full max-lg:max-w-[640px]">
+      <div data-reveal class="inline-flex w-fit items-center gap-2 border border-[var(--border-dark)] px-3 py-1.5">
+        <span class="font-display text-[14px] font-bold text-[var(--accent-gold)]">雅</span>
+        <span class="font-body text-[11px] font-semibold tracking-[2px] text-[var(--accent-gold)]">
+          SELLO MIYABI • EXPERIENCIA EXCLUSIVA Y PRIVADA
+        </span>
+      </div>
+      <h2
+        data-reveal="blur"
+        style="--reveal-delay: 110ms"
+        class="font-display text-[42px] leading-[1.2] font-bold text-[var(--text-light)] max-md:text-[32px]"
+      >
+        Reserve su asiento frente al maestro Itamae
+      </h2>
+      <p data-reveal style="--reveal-delay: 220ms" class="font-body text-[15px] leading-[1.6] text-[var(--text-muted)]">
+        Con solo 10 plazas por turno, cada velada en Miyabi es una ceremonia privada. Recomendamos reservar con un
+        mínimo de 15 días de antelación para asegurar su experiencia.
+      </p>
+      <ul class="flex flex-col gap-4">
+        {
+          bullets.map(({ title, description }, i) => (
+            <li data-reveal style={`--reveal-delay: ${330 + i * 90}ms`} class="flex gap-3.5">
+              <span class="font-body text-[14px] font-bold text-[var(--accent-gold)]">✓</span>
+              <div class="flex flex-col gap-0.5">
+                <p class="font-body text-[14px] font-semibold text-[var(--text-light)]">{title}</p>
+                <p class="font-body text-[13px] text-[var(--text-muted)]">{description}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <form
+      data-reveal
+      style="--reveal-delay: 150ms"
+      class="flex w-[520px] flex-col gap-5 border border-[var(--border-dark)] bg-[var(--bg-card)] p-9 max-lg:w-full max-lg:max-w-[640px] max-md:p-6"
+    >
+      <h3 class="font-display text-[24px] font-bold text-[var(--text-light)]">Solicitud de Reserva</h3>
+      <div class="flex flex-col gap-1.5" style="--reveal-delay: 300ms" data-reveal>
+        <label for="fecha" class="font-body text-[11px] font-semibold tracking-[1.5px] text-[var(--accent-gold)]">
+          FECHA DESEADA
+        </label>
+        <div class="relative">
+          <select
+            id="fecha"
+            name="fecha"
+            class="font-body w-full appearance-none border border-[var(--border-dark)] bg-[var(--bg-surface)] px-4 py-3 text-[13px] text-[var(--text-light)] focus:border-[var(--accent-gold)] focus:outline-none"
+          >
+            {dates.map((d) => <option value={d}>{d}</option>)}
+          </select>
+          <span class="pointer-events-none absolute top-1/2 right-4 -translate-y-1/2 font-body text-[11px] text-[var(--text-muted)]">▼</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-1.5" style="--reveal-delay: 370ms" data-reveal>
+        <label for="turno" class="font-body text-[11px] font-semibold tracking-[1.5px] text-[var(--accent-gold)]">
+          TURNO / SERVICIO
+        </label>
+        <div class="relative">
+          <select
+            id="turno"
+            name="turno"
+            class="font-body w-full appearance-none border border-[var(--border-dark)] bg-[var(--bg-surface)] px-4 py-3 text-[13px] text-[var(--text-light)] focus:border-[var(--accent-gold)] focus:outline-none"
+          >
+            {turnos.map((t) => <option value={t}>{t}</option>)}
+          </select>
+          <span class="pointer-events-none absolute top-1/2 right-4 -translate-y-1/2 font-body text-[11px] text-[var(--text-muted)]">▼</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-1.5" style="--reveal-delay: 440ms" data-reveal>
+        <label for="comensales" class="font-body text-[11px] font-semibold tracking-[1.5px] text-[var(--accent-gold)]">
+          NÚMERO DE COMENSALES
+        </label>
+        <div class="relative">
+          <select
+            id="comensales"
+            name="comensales"
+            class="font-body w-full appearance-none border border-[var(--border-dark)] bg-[var(--bg-surface)] px-4 py-3 text-[13px] text-[var(--text-light)] focus:border-[var(--accent-gold)] focus:outline-none"
+          >
+            {comensales.map((c) => <option value={c}>{c}</option>)}
+          </select>
+          <span class="pointer-events-none absolute top-1/2 right-4 -translate-y-1/2 font-body text-[11px] text-[var(--text-muted)]">▼</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-1.5" style="--reveal-delay: 510ms" data-reveal>
+        <label for="menu" class="font-body text-[11px] font-semibold tracking-[1.5px] text-[var(--accent-gold)]">
+          MENÚ SELECCIONADO
+        </label>
+        <div class="relative">
+          <select
+            id="menu"
+            name="menu"
+            class="font-body w-full appearance-none border border-[var(--border-dark)] bg-[var(--bg-surface)] px-4 py-3 text-[13px] text-[var(--text-light)] focus:border-[var(--accent-gold)] focus:outline-none"
+          >
+            {menus.map((m) => <option value={m}>{m}</option>)}
+          </select>
+          <span class="pointer-events-none absolute top-1/2 right-4 -translate-y-1/2 font-body text-[11px] text-[var(--text-muted)]">▼</span>
+        </div>
+      </div>
+      <button
+        type="submit"
+        style="--reveal-delay: 580ms"
+        data-reveal
+        class="btn-sheen font-body flex w-full items-center justify-center bg-[var(--accent-gold)] px-6 py-4 text-[13px] font-bold tracking-[1.5px] text-[#0B0C0E] transition-colors duration-300 hover:bg-[var(--accent-gold-light)]"
+      >
+        CONFIRMAR RESERVA ONLINE
+      </button>
+      <p data-reveal style="--reveal-delay: 650ms" class="font-body text-center text-[11px] text-[var(--text-muted)]">
+        Cancelación sin cargo hasta 48 horas previas al servicio.
+      </p>
+    </form>
+  </div>
+</section>

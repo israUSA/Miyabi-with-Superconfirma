@@ -1,0 +1,82 @@
+---
+const reviews = [
+  {
+    name: "Valentina Morales",
+    role: "Crítica Gastronómica & Sommelier",
+    dish: "Nigiri de Otoro con Nikiri Añejo",
+    quote:
+      "“El momento en que el chef te entrega el nigiri tibio con el corte de atún azul de Toyosu que literalmente se derrite en 3 segundos es un viaje sensorial absoluto. El maridaje de sake Daiginjo elevó cada matiz.”",
+    avatar: "/images/avatar-1.jpg",
+  },
+  {
+    name: "Carlos & Mariana Chen",
+    role: "Clientes Frecuentes de Omakase",
+    dish: "Kobe Wagyu A5 al Carbón Binchotan",
+    quote:
+      "“Habíamos probado Wagyu en Tokio, pero el ahumado sutil de la madera de roble blanco y el wasabi fresco recién rallado aquí es inigualable. Sentarse frente a la barra y ver el respeto por el producto es un espectáculo.”",
+    avatar: "/images/avatar-2.jpg",
+  },
+  {
+    name: "Dr. Roberto Villaseñor",
+    role: "Celebración de Aniversario",
+    dish: "Sopa Osuimono de Bogavante & Uni",
+    quote:
+      "“Buscábamos una experiencia íntima y exclusiva. Con solo diez comensales por turno, no hay prisas ni ruido: es pura serenidad y alta cocina. Sin duda, la mejor propuesta japonesa de la ciudad.”",
+    avatar: "/images/avatar-3.jpg",
+  },
+];
+---
+
+<section class="flex flex-col gap-12 border-b border-[var(--border-dark)] bg-[var(--bg-surface)] px-16 py-20 max-lg:px-8 max-lg:py-14">
+  <div data-reveal class="flex w-full flex-col items-center gap-3 text-center">
+    <p class="font-body text-[12px] font-semibold tracking-[3px] text-[var(--accent-gold)]">
+      TESTIMONIOS & EXPERIENCIAS REALES
+    </p>
+    <h2
+      data-reveal="blur"
+      style="--reveal-delay: 120ms"
+      class="font-display text-[38px] font-bold text-[var(--text-light)] max-md:text-[28px]"
+    >
+      Recomendaciones de Nuestros Comensales
+    </h2>
+    <p data-reveal style="--reveal-delay: 240ms" class="font-body max-w-[720px] text-[15px] text-[var(--text-muted)]">
+      La emoción genuina de quienes han vivido la ceremonia Omakase en primera persona.
+    </p>
+  </div>
+  <div class="flex w-full gap-6 max-lg:flex-col">
+    {
+      reviews.map(({ name, role, dish, quote, avatar }, i) => (
+        <article
+          data-reveal
+          style={`--reveal-delay: ${i * 140}ms`}
+          class="flex flex-1 flex-col gap-5 border border-[var(--border-dark)] bg-[var(--bg-card)] p-7"
+        >
+          <div class="flex items-center gap-4">
+            <img
+              src={avatar}
+              alt={`Retrato de ${name}`}
+              class="h-14 w-14 shrink-0 border border-[var(--accent-gold)] object-cover"
+              loading="lazy"
+              width="56"
+              height="56"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="font-display text-[17px] font-bold text-[var(--text-light)]">{name}</p>
+              <p class="font-body text-[12px] text-[var(--text-muted)]">{role}</p>
+            </div>
+          </div>
+          <div class="inline-flex w-fit items-center gap-1.5 border border-[var(--border-dark)] bg-[#141820] px-3 py-1.5">
+            <span class="font-body text-[11px] text-[var(--accent-gold)]">★ RECOMENDACIÓN:</span>
+            <span class="font-body text-[11px] font-semibold text-[var(--accent-gold-light)]">{dish}</span>
+          </div>
+          <p class="font-body text-[13.5px] leading-[1.65] text-[var(--text-light)]">{quote}</p>
+          <div class="flex gap-1" aria-label="Calificación: 5 de 5 estrellas">
+            {[...Array(5)].map(() => (
+              <span class="font-body text-[12px] text-[var(--accent-gold)]">★</span>
+            ))}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

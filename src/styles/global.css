@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #0B0C0E;
+  --bg-surface: #14171D;
+  --bg-card: #1A1E26;
+  --accent-gold: #D4AF37;
+  --accent-gold-light: #F3E5AB;
+  --text-light: #F7F5F0;
+  --text-muted: #9BA1B0;
+  --border-dark: #262B36;
+}
+
+@layer base {
+  .font-display {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  .font-body {
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: var(--accent-gold);
+    color: var(--bg-main);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 3px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-main);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2a303c;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-gold);
+  }
+}
+
+/* ---- Motion: "La ceremonia" ---- */
+
+:root {
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 2px;
+  z-index: 60;
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
+  transform: scaleX(var(--sp, 0));
+  transform-origin: 0 50%;
+}
+
+html.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s var(--ease-out),
+    transform 0.85s var(--ease-out),
+    filter 0.85s var(--ease-out),
+    clip-path 1s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.js [data-reveal="blur"] {
+  filter: blur(8px);
+}
+
+html.js [data-reveal="kanji"] {
+  transform: none;
+  transition: opacity 1.6s var(--ease-out);
+}
+
+html.js [data-reveal="wipe"] {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+html.js [data-reveal="wipe"] .zoom {
+  transform: scale(1.12);
+  transition: transform 1.5s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.js [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  clip-path: inset(0 0 0 0);
+}
+
+html.js [data-reveal="wipe"].is-in .zoom {
+  transform: scale(1);
+}
+
+[data-parallax] {
+  transform: translateY(var(--py, 0px));
+  will-change: transform;
+}
+
+[data-elevate].is-scrolled {
+  background: rgba(11, 12, 14, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.card-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-media img {
+  transition: transform 0.9s var(--ease-out);
+}
+
+.card-media:hover .zoom,
+.card-media:focus-within .zoom {
+  transform: scale(1.06) !important;
+  transition-duration: 0.9s;
+}
+
+.card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 55%, rgba(11, 12, 14, 0.55));
+  opacity: 0;
+  transition: opacity 0.6s var(--ease-out);
+}
+
+.card-media:hover::after {
+  opacity: 1;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 1px;
+  background: var(--accent-gold);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.4s var(--ease-out);
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.btn-sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-sheen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, 0.38) 50%, transparent 65%);
+  transform: translateX(-130%);
+  transition: transform 0.7s var(--ease-out);
+}
+
+.btn-sheen:hover::before,
+.btn-sheen:focus-visible::before {
+  transform: translateX(130%);
+}
+
+.arrow-link .arrow {
+  display: inline-block;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.arrow-link:hover .arrow,
+.arrow-link:focus-visible .arrow {
+  transform: translateX(5px);
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html.js [data-reveal="kanji"].is-in {
+    animation: drift 9s ease-in-out 2.4s infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-reveal],
+  html.js [data-reveal] .zoom {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .scroll-progress {
+    display: none;
+  }
+}

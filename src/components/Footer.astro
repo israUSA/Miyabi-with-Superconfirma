@@ -1,0 +1,45 @@
+---
+const columns = [
+  {
+    header: "HORARIOS",
+    lines: ["Martes a Domingo", "1er Turno: 19:30 hrs", "2do Turno: 21:45 hrs", "Lunes: Cerrado"],
+  },
+  {
+    header: "UBICACIÓN",
+    lines: ["Av. Paseo de las Palmas 420", "Distrito Gastronómico", "Valet Parking Exclusivo"],
+  },
+  {
+    header: "CONTACTO",
+    lines: ["concierge@miyabi-omakase.com", "+52 (55) 8940-2020", "@miyabi.omakase"],
+  },
+];
+---
+
+<footer class="flex flex-col gap-9 border-t border-[var(--border-dark)] bg-[var(--bg-surface)] px-16 pt-[60px] pb-10 max-lg:px-8">
+  <div class="flex w-full justify-between max-lg:grid max-lg:grid-cols-2 max-lg:gap-10 max-md:grid-cols-1">
+    <div data-reveal class="flex flex-col gap-1.5">
+      <p class="font-display text-[24px] font-bold text-[var(--accent-gold)]">MIYABI&#8202;&nbsp;雅</p>
+      <p class="font-body text-[13px] text-[var(--text-muted)]">
+        Santuario de Alta Gastronomía Japonesa & Omakase de Autor.
+      </p>
+    </div>
+    {
+      columns.map(({ header, lines }, i) => (
+        <div data-reveal style={`--reveal-delay: ${(i + 1) * 100}ms`} class="flex flex-col gap-2">
+          <p class="font-body text-[11px] font-bold tracking-[2px] text-[var(--accent-gold)]">{header}</p>
+          {lines.map((line) => (
+            <p class="font-body text-[12px] text-[var(--text-muted)]">{line}</p>
+          ))}
+        </div>
+      ))
+    }
+  </div>
+  <div
+    data-reveal
+    style="--reveal-delay: 420ms"
+    class="flex w-full items-center justify-between border-t border-[var(--border-dark)] pt-5 max-md:flex-col max-md:items-start max-md:gap-2"
+  >
+    <p class="font-body text-[12px] text-[var(--text-muted)]">© 2026 Miyabi Haute Cuisine. Todos los derechos reservados.</p>
+    <p class="font-body text-[12px] tracking-[1px] text-[var(--accent-gold)]">GUÍA MICHELIN • DOS ESTRELLAS</p>
+  </div>
+</footer>

@@ -1,0 +1,74 @@
+---
+const stats = [
+  { num: "18", label: "Tiempos Omakase", delay: 0 },
+  { num: "A5", label: "Wagyu Certificado", delay: 90 },
+  { num: "10", label: "Asientos por Servicio", delay: 180 },
+];
+---
+
+<section class="flex items-center gap-14 px-16 pt-[72px] pb-20 max-lg:flex-col max-lg:px-8 max-lg:pt-14 max-lg:pb-14">
+  <div class="flex w-full min-w-0 flex-1 flex-col gap-6">
+    <div
+      data-reveal
+      style="--reveal-delay: 60ms"
+      class="inline-flex w-fit items-center gap-2 border border-[var(--border-dark)] px-3.5 py-1.5"
+    >
+      <span class="font-body text-[10px] text-[var(--accent-gold)]">◆</span>
+      <span class="font-body text-[11px] font-semibold tracking-[2px] text-[var(--accent-gold)]">
+        OMAKASE DE AUTOR • PESCA DIRECTA DE TOYOSU
+      </span>
+    </div>
+    <h1
+      data-reveal="blur"
+      style="--reveal-delay: 160ms"
+      class="font-display text-[52px] leading-[1.15] font-bold text-[var(--text-light)] max-lg:text-[40px] max-md:text-[32px]"
+    >
+      Donde la tradición milenaria se funde con el arte efímero de cada bocado.
+    </h1>
+    <p data-reveal style="--reveal-delay: 320ms" class="font-body text-[16px] leading-[1.6] text-[var(--text-muted)]">
+      Miyabi es un santuario gastronómico de alta cocina japonesa. Ofrecemos una experiencia Omakase única de 18
+      tiempos: cortes de atún azul silvestre importados directamente de Tokio, auténtico Wagyu A5 de Kobe cocinado al
+      carbón Binchotan, y una bodega con los sakes más exclusivos del mundo.
+    </p>
+    <div data-reveal style="--reveal-delay: 440ms" class="flex flex-wrap items-center gap-5">
+      <a
+        href="#reserva"
+        class="btn-sheen font-body inline-flex items-center bg-[var(--accent-gold)] px-7 py-3.5 text-[13px] font-semibold tracking-[1.5px] text-[#0B0C0E] transition-colors duration-300 hover:bg-[var(--accent-gold-light)]"
+      >
+        RESERVAR EXPERIENCIA
+      </a>
+      <a
+        href="#creaciones"
+        class="font-body inline-flex items-center border border-[var(--border-dark)] px-[26px] py-3.5 text-[13px] tracking-[1.5px] text-[var(--text-light)] transition-colors duration-300 hover:border-[var(--accent-gold)] hover:text-[var(--accent-gold)]"
+      >
+        VER MENÚ DEGUSTACIÓN
+      </a>
+    </div>
+    <div class="flex gap-9 pt-4 max-md:flex-wrap max-md:gap-6">
+      {
+        stats.map(({ num, label, delay }) => (
+          <div data-reveal style={`--reveal-delay: ${560 + delay}ms`} class="flex flex-col gap-1">
+            <span class="font-display text-[26px] font-bold text-[var(--accent-gold)]">
+              <span data-count-to={/^\d+$/.test(num) ? num : undefined}>{num}</span>
+            </span>
+            <span class="font-body text-[12px] text-[var(--text-muted)]">{label}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div
+    data-reveal="wipe"
+    class="card-media h-[540px] w-[576px] shrink-0 border border-[var(--border-dark)] max-lg:h-[420px] max-lg:w-full"
+  >
+    <div class="zoom h-full w-full">
+      <img
+        src="/images/hero-omakase.jpg"
+        alt="Selección de nigiri Omakase de la temporada"
+        class="h-full w-full object-cover"
+        width="576"
+        height="540"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,77 @@
+---
+const cards = [
+  {
+    tag: "EXPERIENCIA ESTRELLA",
+    japanese: "握り寿司",
+    title: "Omakase Nigiri Selection",
+    description:
+      "18 tiempos al ritmo del chef. Cortes de Otoro madurado, Uni de Hokkaido, anguila de agua dulce y caviar Oscietra con arroz Koshihikari sazonado con vinagre rojo Akazu.",
+    price: "Desde $195 USD",
+    image: "/images/card-nigiri.jpg",
+    alt: "Nigiri de Omakase servidos en la barra",
+  },
+  {
+    tag: "CERTIFICACIÓN HYOGO",
+    japanese: "神戸牛",
+    title: "Kobe Wagyu A5 Binchotan",
+    description:
+      "Corte selecto de res japonesa de máxima marmoleado BMS 11, asado lentamente al carbón blanco de roble con wasabi fresco de Shizuoka y escamas de sal volcánica.",
+    price: "Suplemento $85 USD",
+    image: "/images/card-wagyu.jpg",
+    alt: "Corte de Kobe Wagyu A5 asado al carbón",
+  },
+  {
+    tag: "BODEGA PRIVADA",
+    japanese: "日本酒",
+    title: "Maridaje Daiginjo & Rarezas",
+    description:
+      "Curaduría exclusiva de sakes Junmai Daiginjo no filtrados, etiquetas centenarias de Niigata y té verde ceremonial gyokuro de Uji para acompañar cada tiempo.",
+    price: "Maridaje $110 USD",
+    image: "/images/card-sake.jpg",
+    alt: "Copas de sake Daiginjo en maridaje",
+  },
+];
+---
+
+<section id="creaciones" class="flex flex-col gap-12 border-y border-[var(--border-dark)] bg-[var(--bg-surface)] px-16 py-20 max-lg:px-8 max-lg:py-14">
+  <div data-reveal class="flex w-full flex-col items-center gap-3 text-center">
+    <p class="font-body text-[12px] font-semibold tracking-[3px] text-[var(--accent-gold)]">ALTA GASTRONOMÍA NIPONA</p>
+    <h2
+      data-reveal="blur"
+      style="--reveal-delay: 120ms"
+      class="font-display text-[38px] font-bold text-[var(--text-light)] max-md:text-[28px]"
+    >
+      Nuestras Creaciones Insignia
+    </h2>
+    <p data-reveal style="--reveal-delay: 240ms" class="font-body max-w-[720px] text-[15px] text-[var(--text-muted)]">
+      Cada plato es una composición artística concebida para honrar la pureza del producto y la maestría del Itamae.
+    </p>
+  </div>
+  <div class="flex w-full gap-7 max-lg:flex-col">
+    {
+      cards.map(({ tag, japanese, title, description, price, image, alt }, i) => (
+        <article class="group flex flex-1 flex-col border border-[var(--border-dark)] bg-[var(--bg-card)] transition-transform duration-500 ease-out hover:-translate-y-1.5">
+          <div data-reveal="wipe" style={`--reveal-delay: ${i * 130}ms`} class="card-media h-[220px] w-full">
+            <div class="zoom h-full w-full">
+              <img src={image} alt={alt} class="h-full w-full object-cover" loading="lazy" width="418" height="220" />
+            </div>
+          </div>
+          <div data-reveal style={`--reveal-delay: ${i * 130 + 160}ms`} class="flex w-full flex-col gap-4 p-6">
+            <div class="flex w-full items-center justify-between">
+              <span class="font-body text-[10px] font-semibold tracking-[1.5px] text-[var(--accent-gold)]">{tag}</span>
+              <span class="font-body text-[13px] text-[var(--text-muted)]">{japanese}</span>
+            </div>
+            <h3 class="font-display text-[22px] font-bold text-[var(--text-light)]">{title}</h3>
+            <p class="font-body text-[13px] leading-[1.6] text-[var(--text-muted)]">{description}</p>
+            <div class="mt-0 flex w-full items-center justify-between border-t border-[var(--border-dark)] pt-3">
+              <span class="font-display text-[15px] font-bold text-[var(--accent-gold-light)]">{price}</span>
+              <a href="#reserva" class="arrow-link font-body text-[12px] font-semibold tracking-[1px] text-[var(--accent-gold)] transition-colors duration-300 hover:text-[var(--accent-gold-light)]">
+                DETALLES <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
