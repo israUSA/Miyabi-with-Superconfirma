@@ -18,19 +18,41 @@ function countUp(el) {
 
 if (!reduced) {
   const revealEls = [...document.querySelectorAll("[data-reveal]")];
-  const io = new IntersectionObserver(
-    (entries) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        const el = entry.target;
-        el.classList.add("is-in");
-        for (const c of el.querySelectorAll("[data-count-to]")) countUp(c);
-        io.unobserve(el);
+  const revealNow = (el) => {
+    el.classList.add("is-in");
+    for (const c of el.querySelectorAll("[data-count-to]")) countUp(c);
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    for (const el of revealEls) revealNow(el);
+  } else {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          revealNow(entry.target);
+          io.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+    );
+    const observe = (el) => io.observe(el);
+    const inView = (el) => {
+      const rect = el.getBoundingClientRect();
+      return rect.top < innerHeight * 0.92 && rect.bottom > 0;
+    };
+    for (const el of revealEls) {
+      if (inView(el)) {
+        requestAnimationFrame(() =>
+          setTimeout(() => {
+            if (!el.classList.contains("is-in")) revealNow(el);
+          }, 60)
+        );
+      } else {
+        observe(el);
       }
-    },
-    { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
-  );
-  for (const el of revealEls) io.observe(el);
+    }
+  }
 
   const parallaxEls = [...document.querySelectorAll("[data-parallax]")].map((el) => ({
     el,
